@@ -1,0 +1,50 @@
+name: Pixeljump
+version: ${project.version}
+author: sheepkill15
+main: com.google.simonarons15.pixeljump.Pixeljump
+api-version: 1.13
+commands:
+  pixeljump:
+    description: "Pixeljump help"
+    usage: "Usage: /pj <args>"
+    aliases: [pixeljump, pj]
+permissions:
+  pixeljump.*:
+    description: Gives acces to all pixeljump commands
+    children:
+      pixeljump.join: true
+      pixeljump.stop: true
+      pixeljump.start: true
+      pixeljump.set: true
+      pixeljump.period: true
+      pixeljump.delay: true
+      pixeljump.leave: true
+      pixeljump.reload: true
+      pixeljump.save: true
+  pixeljump.join:
+    description: Allows you to join a pixeljump game
+    default: true
+  pixeljump.start:
+    description: Allows you to start a pixeljump game
+    default: op
+  pixeljump.stop:
+    description: Allows you to force-stop a pixeljump game
+    default: op
+  pixeljump.set:
+    description: Allows you to set the pixeljump arena
+    default: op
+  pixeljump.period:
+    description: Allows you to change the pixeljump changing period
+    default: op
+  pixeljump.delay:
+    description: Allows you to change the pixeljump starting delay
+    default: op
+  pixeljump.leave:
+    description: Allows you to leave a pixeljump game
+    default: true
+  pixeljump.reload:
+    description: Allows you to reload the plugin configuration
+    default: op
+  pixeljump.save:
+    description: Allows you to save the plugin configuration
+    default: op
